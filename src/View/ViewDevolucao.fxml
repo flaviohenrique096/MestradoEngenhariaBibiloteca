@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="378.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DevolucaoController">
+   <center>
+      <AnchorPane prefHeight="305.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="75.0" text="RA" />
+            <TextField fx:id="textFieldRA" layoutX="48.0" layoutY="71.0" />
+            <TableView fx:id="tableViewEmprestimo" layoutX="22.0" layoutY="145.0" prefHeight="158.0" prefWidth="373.0">
+              <columns>
+                <TableColumn fx:id="colunaLivrosEmprestimo" prefWidth="89.59994316101074" text="Emprestimo" />
+                <TableColumn fx:id="colunaLivrosDataEmprestimo" prefWidth="144.79999542236328" text="Data Empréstimo" />
+                  <TableColumn fx:id="colunaLivrosDataDevolucao" minWidth="0.0" prefWidth="138.4000244140625" text="Data Devolução" />
+              </columns>
+            </TableView>
+            <Button layoutX="209.0" layoutY="71.0" mnemonicParsing="false" onAction="#onActionBuscaEmprestimo" text="Buscar Emprestimo" />
+            <Button fx:id="buttonDevolver" layoutX="166.0" layoutY="322.0" mnemonicParsing="false" onAction="#onActionDevolver" text="Devolver" />
+            <Label layoutX="30.0" layoutY="113.0" text="Nome:" />
+            <Label fx:id="labelNomeAluno" layoutX="67.0" layoutY="113.0" text="Nenhum aluno selecionado" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" smooth="false" stroke="WHITE" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="418.0" />
+            <Label layoutX="168.0" layoutY="5.0" text="Devolução" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
